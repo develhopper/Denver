@@ -1,0 +1,18 @@
+{
+    "name": "develhopper/denver",
+    "description": "Simple php dotEnv manager (DENVER)",
+    "type": "library",
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "develhopper",
+            "email": "alireza.tjd77@gmail.com"
+        }
+    ],
+    "require": {},
+	"autoload": {
+			"psr-4":{
+				"Denver\\": "src/"
+			}
+	}
+}
