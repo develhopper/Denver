@@ -5,7 +5,7 @@ denver is yet another dotEnv manager
 ## Installation
 
 ```console
-composer require denver
+composer require develhopper/denver
 ```
 
 ## Example
@@ -24,7 +24,7 @@ DB_PASSWORD=password
 ```php
 <?php
     use Denver\Env;
-    ENV::setup('path to .env file')
+    ENV::setup('path to .env file');
 ?>
 ```
 
