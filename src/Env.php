@@ -21,7 +21,7 @@ class Env{
         $handle = fopen($path,'r');
 
         while(($line = fgets($handle)) !== false){
-            putenv($line);
+            putenv(trim($line));
         }
         fclose($handle);
     }
