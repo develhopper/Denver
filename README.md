@@ -24,7 +24,16 @@ DB_PASSWORD=password
 ```php
 <?php
     use Denver\Env;
+	$config = [
+		"KEY" => "value"
+	];
+
     ENV::setup('path to .env file');
+
+	// load variables from an array
+	ENV::fromArray($config);
+
+	ENV::put("KEY","value");
 ?>
 ```
 
