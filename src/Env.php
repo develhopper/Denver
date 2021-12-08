@@ -16,14 +16,27 @@ class Env{
             return;
         }
         
-        putenv("ENV_HASH=$hash");
+		static::put("ENV_HASH",$hash);
 
         $handle = fopen($path,'r');
 
         while(($line = fgets($handle)) !== false){
-            putenv(trim($line));
+				$var = explode("=",trim($line)); 
+				static::put($var[0],$var[1]);
         }
         fclose($handle);
     }
 
+	public static function put($key, $value){
+		putenv("$key=$value");
+		$_ENV[$key] = $value;
+	}
+
+	public static function fromArray(array $config){
+		foreach($config as $key => $value){
+			if(is_string($key)){
+					static::put($key,$value);
+			}
+		}
+	}
 }

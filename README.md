@@ -35,5 +35,6 @@ Done
 ```php
 <?php
     $db_host = getenv("DB_HOST");
+	$db_user = $_ENV["DB_USER"]
 ?>
 ```
