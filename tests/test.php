@@ -18,3 +18,5 @@ ENV::fromArray($config_valid);
 ENV::fromArray($config_invalid);
 
 var_dump($_ENV);
+
+echo ENV::get("undefined","default");

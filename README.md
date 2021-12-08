@@ -45,5 +45,6 @@ Done
 <?php
     $db_host = getenv("DB_HOST");
 	$db_user = $_ENV["DB_USER"]
+	$db_password = Env::get("DB_PASSWORD","default_password")
 ?>
 ```

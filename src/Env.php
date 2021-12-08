@@ -32,6 +32,10 @@ class Env{
 		$_ENV[$key] = $value;
 	}
 
+	public static function get($key,$default){
+		return getenv($key)?:$default;
+	}
+
 	public static function fromArray(array $config){
 		foreach($config as $key => $value){
 			if(is_string($key)){
