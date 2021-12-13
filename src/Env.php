@@ -7,7 +7,7 @@ class Env{
 
     public static function setup($path){
         if(!file_exists($path)){
-            throw new Exception('Env: file not Found');
+            throw new \Exception('Env: file not Found');
         }
 
         $hash = md5_file($path);
